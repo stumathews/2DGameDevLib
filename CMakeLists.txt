@@ -18,21 +18,22 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Create the library using the library source files
 add_library(mazer STATIC 
-CharacterBuilder.cpp
-ElapsedGameTimeProvider.cpp
-Enemy.cpp
-GameData.cpp
-GameDataManager.cpp
-GameObjectMoveStrategy.cpp
-Level.cpp
-pch.cpp
-pickup.cpp
-Player.cpp
-PlayerComponent.cpp
-Room.cpp
-RoomGenerator.cpp
-RoomInfo.cpp
-Rooms.cpp)
+    CharacterBuilder.cpp
+    ElapsedGameTimeProvider.cpp
+    Enemy.cpp
+    GameData.cpp
+    GameDataManager.cpp
+    GameObjectMoveStrategy.cpp
+    Level.cpp
+    pch.cpp
+    pickup.cpp
+    Player.cpp
+    PlayerComponent.cpp
+    Room.cpp
+    RoomGenerator.cpp
+    RoomInfo.cpp
+    Rooms.cpp
+)
 
 add_library(mazer::mazer ALIAS mazer)
 
@@ -41,27 +42,28 @@ target_sources(mazer
   FILE_SET api
   TYPE HEADERS
   FILES
-CharacterBuilder.h
-ElapsedGameTimeProvider.h
-Enemy.h
-EnemyMovedEvent.h
-EventNumber.h
-GameData.h
-GameDataManager.h
-GameObjectEventFactory.h
-GameObjectMoveStrategy.h
-Level.h
-pch.h
-pickup.h
-Player.h
-PlayerCollidedWithEnemyEvent.h
-PlayerCollidedWithPickupEvent.h
-PlayerComponent.h
-Room.h
-RoomGenerator.h
-RoomInfo.h
-Rooms.h
-SDLCollisionDetection.h)
+    CharacterBuilder.h
+    ElapsedGameTimeProvider.h
+    Enemy.h
+    EnemyMovedEvent.h
+    EventNumber.h
+    GameData.h
+    GameDataManager.h
+    GameObjectEventFactory.h
+    GameObjectMoveStrategy.h
+    Level.h
+    pch.h
+    pickup.h
+    Player.h
+    PlayerCollidedWithEnemyEvent.h
+    PlayerCollidedWithPickupEvent.h
+    PlayerComponent.h
+    Room.h
+    RoomGenerator.h
+    RoomInfo.h
+    Rooms.h
+    SDLCollisionDetection.h
+)
 
 # Generate a header file containing preprocessor macro definitions to control C/C++ symbol visibility.
 generate_export_header(mazer)

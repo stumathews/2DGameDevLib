@@ -41,7 +41,7 @@ namespace mazer
 		void Draw(SDL_Renderer* renderer) override;
 
 		gamelib::GameObjectType GetGameObjectType() override { return gamelib::GameObjectType::game_defined; }
-		gamelib::ListOfEvents HandleEvent(const std::shared_ptr<gamelib::Event>& event, const unsigned long deltaMs) override;
+		gamelib::ListOfEvents HandleEvent(const std::shared_ptr<gamelib::Event>& event, unsigned long deltaMs) override;
 		gamelib::ListOfEvents& OnPlayerMoved(std::vector<std::shared_ptr<gamelib::Event>>& generatedEvents);
 		gamelib::Coordinate<int> GetCenter(int width, int height) const;
 		gamelib::Coordinate<int> GetCenter() const;

@@ -18,20 +18,20 @@ namespace mazer
 	class Pickup final : public gamelib::DrawableGameObject, public std::enable_shared_from_this<Pickup>
 	{
 	public:
-		Pickup(const std::string& name, const std::string& type, const int x, const int y, const int width,
-			const int height, const bool visible, const int inRoomNumber);
+		Pickup(const std::string& name, const std::string& type, int x, int y, int width,
+		       int height, bool visible, int inRoomNumber);
 
-		Pickup(const std::string& name, const std::string& type, const gamelib::Coordinate<int> startingPoint, const bool visible,
-			const int inRoomNumber, const std::shared_ptr<gamelib::SpriteAsset> asset);
+		Pickup(const std::string& name, const std::string& type, gamelib::Coordinate<int> startingPoint, bool visible,
+		       int inRoomNumber, std::shared_ptr<gamelib::SpriteAsset> asset);
 
-		explicit Pickup(const bool visible);
+		explicit Pickup(bool visible);
 
 		gamelib::GameObjectType GetGameObjectType() override;
 
 		std::string GetSubscriberName() override;
 		std::string GetName() override;
 		bool IsInSameRoomAsPlayer(std::shared_ptr<Player> player) const;
-		gamelib::ListOfEvents HandleEvent(const std::shared_ptr<gamelib::Event>& event, const unsigned long deltaMs) override;
+		gamelib::ListOfEvents HandleEvent(const std::shared_ptr<gamelib::Event>& event, unsigned long deltaMs) override;
 
 		void Initialize();
 		void Draw(SDL_Renderer* renderer) override;

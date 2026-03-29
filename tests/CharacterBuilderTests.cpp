@@ -35,7 +35,7 @@ class CharacterBuilderTests : public testing::Test
 	  gamelib::EventManager::Get()->ClearSubscribers();
 	}
 
-	void DoBasicNpcTests(const std::shared_ptr<gamelib::Npc> npc) const;
+	void DoBasicNpcTests(std::shared_ptr<gamelib::Npc> npc) const;
 	static void DoBasicDrawableObjectTests(const std::shared_ptr<gamelib::DrawableGameObject>& drawableGameObject);
 	static void DoBasicGameObjectTests(const std::shared_ptr<gamelib::GameObject>& gameObject, const std::string& type);
 

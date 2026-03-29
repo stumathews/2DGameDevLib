@@ -16,7 +16,6 @@ using namespace gamelib;
 
 namespace mazer
 {
-
 	std::shared_ptr<Player> CharacterBuilder::BuildPlayer(const std::string& playerName,
 		const std::shared_ptr<Room>& playerRoom,
 		const int playerResourceId, const std::string& nickName)

@@ -47,9 +47,9 @@ namespace mazer
 		std::shared_ptr<RoomInfo> CurrentRoom;
 		std::shared_ptr<const Level> CurrentLevel;
 		std::vector<std::shared_ptr<gamelib::Event>> HandleEvent(const std::shared_ptr<gamelib::Event>& event,
-			const unsigned long deltaMs) override;
+		                                                         unsigned long deltaMs) override;
 		void DoEnemyBehaviors(unsigned long deltaMs);
-		bool Move(const unsigned long deltaMs); // true if moved
+		bool Move(unsigned long deltaMs); // true if moved
 		void Update(unsigned long deltaMs) override;
 		void LoadSettings() override;
 		std::string GetSubscriberName() override { return Name; }
